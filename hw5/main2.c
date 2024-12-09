@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
     double PI = 4.0f;
@@ -10,10 +9,12 @@ int main() {
         PI += sign *(4.0 / i);
         sign = -sign;
         
-        if (fabs(PI - 3.14159) < 0.00001) {
+        int a = (int) (PI * 1000000);
+        int b = (int) (PI - (int) PI);
+        
+        if (a == 3141590) {
           break;  
         }
-       
     }
     printf("PI = %.5f\n", PI);
     printf("最小的x = %d\n", x+1);
