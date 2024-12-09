@@ -10,7 +10,6 @@ int main() {
         sign = -sign;
         
         int a = (int) (PI * 1000000);
-        int b = (int) (PI - (int) PI);
         
         if (a == 3141590) {
           break;  
