@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int i = 10;
+    double j = (log (i) / log (10));
+    double k = (log (2) / log (10));
+    if ((double) (j / k) == (int) (j / k))  {
+        printf("是");
+    }
+    else {
+        printf("否");
+    }
+    return 0;
+}
