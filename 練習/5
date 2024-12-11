@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int i = 270;
+    int t = (i - 1) / 30;
+    if (i > 270) {
+        printf("240元");
+    }
+    else {
+        printf("%d元", 30 * t);
+    }
+    return 0;
+}
