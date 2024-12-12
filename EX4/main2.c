@@ -1,20 +1,27 @@
 #include <stdio.h>
 
 int main() {
-    double PI = 4.0;
-    int x = 1;
-    int sign = -1;
-    
-    for (int i = 3; ; i += 2, x++) {
-        PI += sign * (4.0 / i);
-        sign = -sign;
-        
-        if (PI >= 3.141585 && PI < 3.141595) {
-          break;
-            
+    double pi = 4.0;
+    int flag = 1;
+    long ipi = 0;
+    int x = 0;
+
+    for (int i = 3; i < 1000000; i += 2) {
+        if (flag == 0) {
+            pi += (4.0 / i);
+            flag++;
+        } else {
+            pi -= (4.0 / i);
+            flag--;
+        }
+
+        ipi = pi * 100000;
+        if (ipi == 314159) {
+            x = i;
+            break;
         }
     }
-    printf("PI = %.5f\n", PI);
-    printf("最小的x = %d", x+1);
+
+    printf("%d %.8f", x, pi);
     return 0;
 }
