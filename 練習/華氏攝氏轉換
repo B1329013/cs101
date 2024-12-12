@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    int fah = 65;
+    float cel;
+    cel = (fah - 32) * (5.0 / 9);
+    printf("fah = %d , cel = %.2f", fah, cel);
+    return 0;
+}
